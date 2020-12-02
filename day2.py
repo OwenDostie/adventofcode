@@ -1,21 +1,21 @@
 import re
+import copy
 f = filter(None,open("day2.txt").read().split("\n"))
+g = copy.copy(f)
 
-count = 0
+count1 = 0; count2 = 0
 for line in f:
+    # part one
     l = re.split("-|:| ",line)
     cc = 0
     for c in l[4]:
         cc += (l[2] == c)
-    count += (cc >= int(l[0]) and cc <= int(l[1]))
+    count1 += (cc >= int(l[0]) and cc <= int(l[1]))
+    
+    # part two
+    print(int(l[0])-1, int(l[1])-1, l)
+    print(l[4][int(l[0])-1],l[4][int(l[1])-1],l[2])
+    count2 += (l[4][int(l[0])-1] == l[2])^(l[4][int(l[1])-1] == l[2])  
 
-print("Part one:", count)
-count = 0
-print("hi")
-for line in f:
-    l = re.split("-|:| ",line)
-    cc = 0
-    print(l[int(l[0])-1],l[int(l[1])-1],l[2])
-    count += (l[int(l[0])-1] == l[2])^(l[int(l[1])-1] == l[2])
-
-print("Part two:", count)
+print("Part one:", count1)
+print("Part two:", count2)
