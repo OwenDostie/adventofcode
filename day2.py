@@ -1,7 +1,6 @@
 import re
-import copy
+
 f = filter(None,open("day2.txt").read().split("\n"))
-g = copy.copy(f)
 
 count1 = 0; count2 = 0
 for line in f:
