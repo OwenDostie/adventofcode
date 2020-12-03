@@ -1,5 +1,5 @@
 from itertools import combinations
-f = open("input.txt","r")
+f = open("day01.txt","r")
 f = list(map(int, f.read().splitlines()))
 
 seeking = set()

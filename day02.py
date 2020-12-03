@@ -1,6 +1,6 @@
 import re
 
-f = filter(None,open("day2.txt").read().split("\n"))
+f = filter(None,open("day02.txt").read().split("\n"))
 
 count1 = 0; count2 = 0
 for line in f:

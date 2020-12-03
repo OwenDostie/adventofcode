@@ -1,4 +1,4 @@
-f = open("day3.txt").read().split()
+f = open("day03.txt").read().split()
 gw = len(f[0]) # grid width
 i = 0 # index off current position
 ct = 0 # number off trees
