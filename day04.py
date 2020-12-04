@@ -20,7 +20,7 @@ for l in f:
     "ecl:(amb|blu|brn|gry|grn|hzl|oth)(\\s|$|-)",
     "pid:[0-9]{9}(\\s|$|-)"]:
         if re.search(field, l) is None:
-            count -= 1; 
+            count -= 1
             #print(l,"\n","fault is --", field,"\n"); 
             break
     count += 1
