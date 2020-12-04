@@ -5,6 +5,7 @@ I'm using Python, because it's the best programming language. As 2020 is coming 
 :)
 
 **Links**
+
 https://adventofcode.com/2020/leaderboard/private/view/990648
-https://github.com/jpbulman/Advent-Of-Code
-https://github.com/guslipkin/AdventOfCode2020
+[JP](https://github.com/jpbulman/Advent-Of-Code)
+[Gus](https://github.com/guslipkin/AdventOfCode2020)
