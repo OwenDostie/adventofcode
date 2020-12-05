@@ -6,4 +6,5 @@ I'm using Python, because it's the best programming language. As 2020 is coming 
 
 - [jpbulman](https://github.com/jpbulman/Advent-Of-Code)
 - [guslipkin](https://github.com/guslipkin/AdventOfCode2020)
+- [alexanderc360](https://github.com/alexanderc360/AOC2020)
 - [Private leaderboard](https://adventofcode.com/2020/leaderboard/private/view/990648)
