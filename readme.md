@@ -7,4 +7,5 @@ I'm using Python, because it's the best programming language. The end of 2020 is
 - [jpbulman](https://github.com/jpbulman/Advent-Of-Code)
 - [guslipkin](https://github.com/guslipkin/AdventOfCode2020)
 - [alexanderc360](https://github.com/alexanderc360/AOC2020)
+- [UnsolvedCypher](https://github.com/UnsolvedCypher/AdventOfCode2020)
 - [Private leaderboard](https://adventofcode.com/2020/leaderboard/private/view/990648)
