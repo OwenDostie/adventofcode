@@ -2,15 +2,14 @@ import re
 
 f = open('day07.txt').read().rstrip().split('\n')
 
-# f = '''light red bags contain 1 bright white bag, 2 muted yellow bags.
-# dark orange bags contain 3 bright white bags, 4 muted yellow bags.
-# bright white bags contain 1 shiny gold bag.
-# muted yellow bags contain 2 shiny gold bags, 9 faded blue bags.
-# shiny gold bags contain 1 dark olive bag, 2 vibrant plum bags.
-# dark olive bags contain 3 faded blue bags, 4 dotted black bags.
-# vibrant plum bags contain 5 faded blue bags, 6 dotted black bags.
-# faded blue bags contain no other bags.
-# dotted black bags contain no other bags.'''.split('\n')
+# f = '''shiny gold bags contain 2 dark red bags.
+# dark red bags contain 2 dark orange bags, 2 dark green bags, 5 purple bags.
+# purple bags conntain no other bags.
+# dark orange bags contain 2 dark yellow bags.
+# dark yellow bags contain 2 dark green bags.
+# dark green bags contain 2 dark blue bags.
+# dark blue bags contain 2 dark violet bags.
+# dark violet bags contain no other bags'''.split('\n')
 
 S = set()
 def parentBags(bags):
@@ -28,17 +27,24 @@ def parentBags(bags):
 parentBags(['shiny gold bag'])
 print('Part one:', len(S))
 
-S = set()
+print(f)
 def childrenBags(bags):
-    l = []
+    ct = 0
     bags = '('+'|'.join(bags)+')'
     for row in f:
-        m = re.search("(.*)s contain .*" + bags, row)
+        if not re.match(bags + "s contain", row): continue
+        m = re.findall("\d .*? bag", row)
         if m:
-            print(row, m.group(1), bags, '\n--------\n')
-            l.append(m.group(1))
-            S.add(m.group(1))
-    if l:
-        parentBags(l)
+            #print(m)
+            for i in m:
+                ct += int(i[:1]) * childrenBags([i[2:]])
+            ct += 1
+        else:
+            # print(row)
+            return 1
+    return ct
 
-print('Part two:', len(S))
+#print(childrenBags(['mirrored blue bag']))
+print('Part two:', childrenBags(['shiny gold bag']) - 1)
+
+# 1+    2 + 2() + 
